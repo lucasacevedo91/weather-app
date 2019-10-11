@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeadbarComponent } from './components/headbar/headbar.component';
 import { CityComponent } from './components/city/city.component';
+import { CitiesComponent } from './components/cities/cities.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadbarComponent,
-    CityComponent
+    CityComponent,
+    CitiesComponent,
   ],
   imports: [
     BrowserModule
