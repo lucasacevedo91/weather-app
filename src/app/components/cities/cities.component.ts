@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CityComponent } from '../city/city.component'
+import { CityComponent } from '../city/city.component';
 
 @Component({
   selector: 'cities',

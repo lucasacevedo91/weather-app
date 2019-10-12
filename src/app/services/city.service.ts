@@ -12,7 +12,7 @@ export class CityService{
         this.url = 'https://www.smn.gob.ar';
     }
     
-    getWeather(cityId): Observable<any>{
-        return this._http.get(this.url + "");
+    getWeather(): Observable<any>{
+        return this._http.get(this.url + "/map_items/weather");
     }
 }

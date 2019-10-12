@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HeadbarComponent } from './components/headbar/headbar.component';
 import { CityComponent } from './components/city/city.component';
 import { CitiesComponent } from './components/cities/cities.component';
+import { CityService } from './services/city.service';
+import { HttpClient } from 'selenium-webdriver/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,12 @@ import { CitiesComponent } from './components/cities/cities.component';
     CitiesComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClient
   ],
-  providers: [],
+  providers: [
+    CityService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
