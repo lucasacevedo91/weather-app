@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CityComponent } from '../city/city.component';
-import { CityModel } from '../../models/newCity.model';
+import { Ciudad } from '../../models/newCity.model';
 
 @Component({
   selector: 'cities',
@@ -8,23 +8,19 @@ import { CityModel } from '../../models/newCity.model';
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent implements OnInit {  
-  public cities: CityComponent[];
+  public cities: Array<Ciudad>;
   public newCity: any;
-  public newName: String;
-  public newWeather: String;
-  public newTemp: Number;
   constructor() { 
-    this.cities = []
+    this.cities = [];
   }
 
-  addCity(newName, newWeather, newTemp){
-    this.newName = newName;
-    this.newWeather = newWeather;
-    this.newTemp = newTemp;
+  addCity(name, weather, temp){
+    this.newCity = new CityComponent(name, temp, weather);
+    this.cities.push(this.newCity);
+    console.log(this.cities);
   }
 
   ngOnInit() {
-
   }
 
 }

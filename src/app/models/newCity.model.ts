@@ -1,4 +1,4 @@
-export class CityModel{
+export class Ciudad{
     constructor(
         public name: String,
         public weather: String,

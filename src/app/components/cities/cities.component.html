@@ -3,11 +3,11 @@
     <label for="name">City Name: </label>
     <input type="text" name="name" [(ngModel)]="name">
     <label for="weather">Type of weather: </label>
-    <input type="text" name="weather">
+    <input type="text" name="weather" [(ngModel)]="weather">
     <label for="temp">Temperature: </label>
-    <input type="number" name="temp">
+    <input type="number" name="temp" [(ngModel)]="temp">
     <br>
-    <button type="submit" [ngStyle]="{'margin-top': '20px'}" (click)="addCity()">Create</button>
+    <input type="submit" value="Create" [ngStyle]="{'margin-top': '20px'}"  (click)="addCity(name, weather, temp)">
 </form>
 
 <div class="container" [ngStyle]="{'background': 'red', 'height': '350px', 'margin': '20px auto'}">
