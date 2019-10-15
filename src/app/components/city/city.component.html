@@ -1,1 +1,12 @@
-<p>city works!</p>
+<div class="card" [ngStyle]="{'background': 'yellow', 'display': 'inline-block', 'margin': '5px auto'}">
+    <div class="content" [ngStyle]="{'color': 'black'}">
+        <h2>{{cityName}}</h2>
+        <ng-container [ngSwitch]="cityWeather" >
+            <img src="../../../assets/sun.png" alt="Sunny" *ngSwitchCase="'Sunny'">
+            <img src="../../../assets/cloud.png" alt="Cloudy" *ngSwitchCase="'Cloudy'">
+            <img src="../../../assets/rain.png" alt="Rainy" *ngSwitchCase="'Rainy'">
+            <img src="../../../assets/rain.png" alt="Rainy" *ngSwitchDefault>
+        </ng-container>
+        <h1>{{cityTemperature}}°C</h1>
+    </div>
+</div>

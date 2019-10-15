@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CityService } from '../../services/city.service';
 
 @Component({
   selector: 'city',
@@ -12,16 +11,22 @@ export class CityComponent implements OnInit {
   public cityWeather: String;
   public cityTemperature: Number;
   constructor(
-    public _cityService: CityService
-  ) { 
-
+    public name: String,
+    public temp: Number,
+    public weather: String
+    ) { 
+      this.cityName = name;
+      this.cityTemperature = temp;
+      this.cityWeather = weather;
   }
 
   ngOnInit() {
-    this._cityService.getWeather();
-    (response: any) => {
-      console.log(response);
-    }
+    
   }
 
+  addCity(name, temp, weather){
+    this.cityName = name;
+    this.cityTemperature = temp;
+    this.cityWeather = weather;
+  }
 }

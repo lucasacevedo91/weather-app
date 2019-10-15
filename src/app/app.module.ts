@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { HeadbarComponent } from './components/headbar/headbar.component';
 import { CityComponent } from './components/city/city.component';
 import { CitiesComponent } from './components/cities/cities.component';
-import { CityService } from './services/city.service';
-import { HttpClient } from 'selenium-webdriver/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +16,9 @@ import { HttpClient } from 'selenium-webdriver/http';
   ],
   imports: [
     BrowserModule,
-    HttpClient
+    FormsModule,
   ],
   providers: [
-    CityService
   ],
   bootstrap: [AppComponent]
 })

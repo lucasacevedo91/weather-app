@@ -1,1 +1,15 @@
-<p>cities works!</p>
+<form #cityForm [ngStyle]="{'color': 'black'}">
+    <h3>Add new city</h3>
+    <label for="name">City Name: </label>
+    <input type="text" name="name" [(ngModel)]="name">
+    <label for="weather">Type of weather: </label>
+    <input type="text" name="weather">
+    <label for="temp">Temperature: </label>
+    <input type="number" name="temp">
+    <br>
+    <button type="submit" [ngStyle]="{'margin-top': '20px'}" (click)="addCity()">Create</button>
+</form>
+
+<div class="container" [ngStyle]="{'background': 'red', 'height': '350px', 'margin': '20px auto'}">
+    <div *ngFor="let c of cities"></div>
+</div>
