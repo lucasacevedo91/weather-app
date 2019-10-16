@@ -1,4 +1,4 @@
-<form #cityForm [ngStyle]="{'color': 'black'}">
+<form #cityForm="ngForm" [ngStyle]="{'color': 'black'}">
     <h3>Add new city</h3>
     <label for="name">City Name: </label>
     <input type="text" name="name" [(ngModel)]="name">
@@ -7,9 +7,25 @@
     <label for="temp">Temperature: </label>
     <input type="number" name="temp" [(ngModel)]="temp">
     <br>
-    <input type="submit" value="Create" [ngStyle]="{'margin-top': '20px'}"  (click)="addCity(name, weather, temp)">
+    <input type="submit" value="Create" 
+        [ngStyle]="{'margin-top': '20px'}"  
+        (click)="addCity(name, weather, temp)">
 </form>
 
-<div class="container" [ngStyle]="{'background': 'red', 'height': '350px', 'margin': '20px auto'}">
-    <div *ngFor="let c of cities"></div>
+<div class="container" [ngStyle]="{'height': '350px', 'margin': '20px auto'}">
+    <div *ngFor="let c of cities" 
+    [ngStyle]="{'background': 'yellow', 'border-radius': '8%', 'display': 'inline-block', 'margin': '5px'}">
+    <div class="card">
+            <div class="content" [ngStyle]="{'color': 'black'}">
+                <h2>{{c.name}}</h2>
+                <ng-container [ngSwitch]="c.weather" >
+                    <img src="../../../assets/sun.png" alt="Sunny" *ngSwitchCase="'Sunny'">
+                    <img src="../../../assets/cloud.png" alt="Cloudy" *ngSwitchCase="'Cloudy'">
+                    <img src="../../../assets/rain.png" alt="Rainy" *ngSwitchCase="'Rainy'">
+                    <img src="../../../assets/rain.png" alt="Rainy" *ngSwitchDefault>
+                </ng-container>
+                <h1>{{c.temp}}°C</h1>
+            </div>
+        </div>    
+    </div>
 </div>

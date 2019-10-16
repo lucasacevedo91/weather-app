@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { HeadbarComponent } from './components/headbar/headbar.component';
-import { CityComponent } from './components/city/city.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { FormsModule } from '@angular/forms';
 
@@ -11,8 +9,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HeadbarComponent,
-    CityComponent,
-    CitiesComponent,
+    CitiesComponent
   ],
   imports: [
     BrowserModule,
