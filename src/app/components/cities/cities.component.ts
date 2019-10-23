@@ -8,6 +8,7 @@ import { Ciudad } from '../../models/city.model';
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent implements OnInit {  
+  public pic = "../../../assets/sunny-field.jpg";
   public cities: Ciudad[];
   public newCity: Ciudad;
   constructor() { 

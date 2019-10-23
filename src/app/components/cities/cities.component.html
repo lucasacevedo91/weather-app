@@ -14,7 +14,8 @@
 
 <div class="container" [ngStyle]="{'height': '350px', 'margin': '20px auto'}">
     <div *ngFor="let c of cities" 
-    [ngStyle]="{'background': 'yellow', 'border-radius': '8%', 'display': 'inline-block', 'margin': '5px'}">
+    [style.background-image]="'url(' + pic + ')'"
+    [ngStyle]="{'border-radius': '8%', 'display': 'inline-block', 'margin': '5px'}">
     <div class="card">
             <div class="content" [ngStyle]="{'color': 'black'}">
                 <h2>{{c.name}}</h2>
